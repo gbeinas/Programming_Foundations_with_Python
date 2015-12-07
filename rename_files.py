@@ -5,7 +5,14 @@ def rename_files():
 
     #(1) get filenames from a folder
     file_list  = os.listdir(r"C:\Users\√…Ÿ—√œ”\Desktop\prank")
-    print(file_list)
+    #print(file_list)
+    saved_path = os.getcwd()
+    print("Current path is " + saved_path)
+    os.chdir("C:\Users\√…Ÿ—√œ”\Desktop\prank")
+    new_path = os.getcwd()
+    print("Current path is " + new_path)
     #(2) for each file,rename filename
+    for file_name in file_list:
+        os.rename(file_name, file_name.translate(None, "0123456789"))
 
 rename_files()
