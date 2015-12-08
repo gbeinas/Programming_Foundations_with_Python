@@ -14,13 +14,23 @@ def draw_art():
     brad = turtle.Turtle()
     brad.shape("turtle")
     brad.color("yellow")
-    brad.speed(2)
-    draw_square(brad)
+    brad.speed(10)
+    i = 0
+    while i<5:
+        draw_square(brad)
+        brad.right(10)
+        i = i+1
+    brad.right(180)
+    j = 0
+    while j<5:
+        draw_square(brad)
+        brad.right(10)
+        j = j+1
     #Create the turtle Angie - Draws a circle
-    angie = turtle.Turtle()
-    angie.shape("arrow")
-    angie.color("blue")
-    angie.circle(100)
+##    angie = turtle.Turtle()
+##    angie.shape("arrow")
+##    angie.color("blue")
+##    angie.circle(100)
     
     window.exitonclick()
 
